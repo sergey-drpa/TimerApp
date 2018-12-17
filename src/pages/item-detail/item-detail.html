@@ -11,6 +11,25 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
 
+  <ion-item>
+    <ion-label>Start Time</ion-label>
+    <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="event.timeStarts" (ionChange)="dayChanged()"></ion-datetime>
+  </ion-item>
+
+  <button ion-button round (click)="shwoNotify()">Show Notify Now</button>
+
+  <ion-card>
+
+    <ion-card-header>
+      Card Header
+    </ion-card-header>
+
+    <ion-card-content>
+      {{logg}}
+    </ion-card-content>
+
+  </ion-card>
+
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
     <p>{{item.about}}</p>

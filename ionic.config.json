@@ -1,6 +1,8 @@
 {
   "name": "TimerApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "d89154f3"
 }

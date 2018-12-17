@@ -5,6 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
+import { MainPage } from '../pages';
 import { Settings } from '../providers';
 
 @Component({
@@ -27,7 +28,7 @@ import { Settings } from '../providers';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = MainPage;//FirstRunPage;
 
   @ViewChild(Nav) nav: Nav;
 
