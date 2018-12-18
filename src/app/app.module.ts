@@ -10,6 +10,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { BackgroundMode } from '@ionic-native/background-mode';
+import { Dialogs } from '@ionic-native/dialogs';
 
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
@@ -50,7 +52,8 @@ export function provideSettings(storage: Storage) {
         deps: [HttpClient]
       }
     }),
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      mode: 'ios'}),
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -65,6 +68,8 @@ export function provideSettings(storage: Storage) {
     SplashScreen,
     StatusBar,
     LocalNotifications,
+    BackgroundMode,
+    Dialogs,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }

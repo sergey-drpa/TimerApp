@@ -11,17 +11,40 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
 
-  <ion-item>
-    <ion-label>Start Time</ion-label>
-    <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="event.timeStarts" (ionChange)="dayChanged()"></ion-datetime>
-  </ion-item>
-
-  <button ion-button round (click)="shwoNotify()">Show Notify Now</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Время начала:</ion-label>
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="event.timeStarts" (ionChange)="dayChanged()"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Время завершения:</ion-label>
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="event.timeEnds" (ionChange)="dayChanged()"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Интервал мин.:</ion-label>
+          <ion-datetime displayFormat="mm" pickerFormat="mm" [(ngModel)]="event.interval" (ionChange)="dayChanged()"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button round float-right (click)="shwoNotify()">Сохранить</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
   <ion-card>
 
     <ion-card-header>
-      Card Header
+      Info
     </ion-card-header>
 
     <ion-card-content>

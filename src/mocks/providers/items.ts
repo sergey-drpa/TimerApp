@@ -8,49 +8,27 @@ export class Items {
 
   defaultItem: any = {
     "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
+    "profilePic": "assets/img/speakers/alarm.jpg",
     "about": "Burt is a Bear.",
+    interval: 30
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "09:00 - 23:00",
+        "profilePic": "assets/img/speakers/alarm.jpg",
+        "about": "Каждые 30 мин.",
+        interval: 30
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
-      },
-      {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
-      },
-      {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
-      },
-      {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
-      },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "11:00 - 21:00",
+        "profilePic": "assets/img/speakers/alarm.jpg",
+        "about": "Каждые 45 мин.",
+        interval: 45
       }
-    ];
+      ];
 
     for (let item of items) {
       this.items.push(new Item(item));

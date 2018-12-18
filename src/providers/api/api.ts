@@ -26,6 +26,7 @@ export class Api {
       }
     }
 
+    debugger;
     return this.http.get(this.url + '/' + endpoint, reqOpts);
   }
 
